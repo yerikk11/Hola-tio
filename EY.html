@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensaje para Tío Nico</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fdf2e9;
+            text-align: center;
+            margin-top: 50px;
+            overflow-x: hidden;
+        }
+        h1 {
+            font-size: 3em;
+            color: #ff6f61;
+        }
+        p {
+            font-size: 1.5em;
+            color: #333;
+        }
+        .emoji {
+            font-size: 2em;
+        }
+        .message {
+            background-color: #ffe5b4;
+            border-radius: 10px;
+            padding: 20px;
+            display: inline-block;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        #button {
+            background-color: #ff6f61;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        #button:hover {
+            background-color: #ff8b77;
+        }
+        .balloon {
+            position: absolute;
+            font-size: 2em;
+            animation: fall 5s linear infinite;
+        }
+        @keyframes fall {
+            0% {
+                top: -10%;
+                opacity: 1;
+            }
+            100% {
+                top: 100%;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Te quiero, Tío Nico </h1>
+    <div class="message">
+        <p class="emoji">🍰🍩🧁</p>
+        <p>Querido Tío Nico,</p>
+        <p>Tío Nico, te agradezco de corazón por todo tu esfuerzo, tus consejos y tu valentía. Realmente eres el pilar que protege y mantiene unida a esta familia. No sé dónde estaríamos sin ti, pero sé que gracias a ti estamos mejor. Sobre todo, gracias por ser quien eres.</p>
+        <p>Con mucho amor,</p>
+        <p>❤️ Tu sobrino ❤️</p>
+        <p class="emoji">🧁🍩🍰</p>
+    </div>
+    <button id="button">¡Haz clic para lanzar globos! 🎈</button>
+
+    <script>
+        // Función para crear globos que caen
+        function createBalloon() {
+            const balloon = document.createElement('div');
+            balloon.classList.add('balloon');
+            balloon.textContent = '🎈';
+            document.body.appendChild(balloon);
+
+            // Posición inicial aleatoria
+            balloon.style.left = Math.random() * 100 + 'vw';
+            balloon.style.animationDuration = Math.random() * 3 + 3 + 's'; // Velocidades aleatorias
+
+            // Eliminar el globo después de que termine la animación
+            setTimeout(() => {
+                balloon.remove();
+            }, 5000);
+        }
+
+        // Crear globos al hacer clic en el botón
+        document.getElementById('button').addEventListener('click', () => {
+            setInterval(createBalloon, 300); // Crear un globo cada 300ms
+        });
+    </script> <br>
+<audio autoplay>
+</audio>
+</audio>
+</body>.  
+</html>
+  
